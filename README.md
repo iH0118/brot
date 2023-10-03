@@ -1,8 +1,8 @@
-# h0118/brot
+# ih0118/brot
 
 escape time / histogram mandelbrot set renderer
 
-usage:
+###usage:
 ```sh
 clang -Wall -Werror -O3 -o brot brot.c
 
@@ -13,3 +13,8 @@ clang -Wall -Werror -O3 -o brot brot.c
 ./brot <scale> <iterations> p | pnmtopng > <filename>.png
 ```
 default settings: `brot 4 1024`
+
+###other stuff
+clang default optimization VS -O3
+!(/timecmp.png "Arch Linux x86-64, AMD Ryzen 7 5800X @ 4.200 GHz")
+the -O3 flag makes the program ~3x faster
