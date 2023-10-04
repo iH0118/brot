@@ -1,4 +1,4 @@
-# ih0118/brot
+# ih0118 brot
 
 escape time / histogram mandelbrot set renderer
 ##
@@ -17,6 +17,8 @@ default settings: `brot 4 1024`
 ### other stuff
 clang default optimization VS -O3
 
-![](/timecmp.png "Arch Linux x86-64, AMD Ryzen 7 5800X @ 4.200 GHz")
+![](/timecmp.png "Arch Linux x86-64, AMD Ryzen 7 5800X @ 4.200 GHz; The binary compiled with the -O3 flag is about 3 times faster")
 
-the -O3 flag makes the program ~3x faster
+
+
+

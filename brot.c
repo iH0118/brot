@@ -8,6 +8,7 @@
 
 typedef unsigned int uint;
 typedef unsigned char uchar;
+typedef _Bool bool;
 typedef struct rgb24 rgb24;
 
 struct rgb24 {
@@ -26,7 +27,7 @@ struct rgb24 {
 int main(int argc, char** argv) {
 	uint scale = 4;
 	uint max_iter = 1024;
-    _Bool output_mode = 0;
+    bool output_mode = 0;
 
 	if (argc > 1) scale = atoi(argv[1]);
     if (argc > 2) max_iter = atoi(argv[2]);
@@ -45,6 +46,8 @@ int main(int argc, char** argv) {
 	    vals[i] = calloc(size_y, sizeof(union v));
         if (vals[i] == NULL) return 1;
     }
+
+    fprintf(stderr, "%ix%i, %i iterations\n", size_x, size_y, max_iter);
 
     //calculate escape time
     for (int k = 0; k < size_yh; ++k) {
@@ -90,7 +93,7 @@ int main(int argc, char** argv) {
             uint ct = vals[i][k].iter_count;
             vals[i][k].hue = 0;
             for (int l = 0; l < ct; ++l) {
-                vals[i][k].hue += (double)px_per_iter[l] / total;
+                vals[i][k].hue += (float)px_per_iter[l] / total;
             }
         }
     }
