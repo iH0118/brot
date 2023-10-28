@@ -7,12 +7,12 @@ escape time / histogram mandelbrot set renderer
 clang -Wall -Werror -O3 -o brot brot.c
 
 # ascii output
-./brot <scale> <iterations>
+./brot <scale> <iterations> <palette>
 
 # png file output
-./brot <scale> <iterations> p | pnmtopng > <filename>.png
+./brot <scale> <iterations> <palette> p | pnmtopng > <filename>.png
 ```
-default settings: `brot 4 1024`
+default settings: `brot 4 1024 19`
 ##
 ### other stuff
 clang default optimization VS -O3
