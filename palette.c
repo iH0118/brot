@@ -54,6 +54,6 @@ int main(void) {
             fputs("\033[0m\n", stderr);
         }
     }
-    
+
     return 0;
 }
